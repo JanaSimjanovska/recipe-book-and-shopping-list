@@ -1,0 +1,25 @@
+<!-- <a  (click)="passRecipeToRecipeList(recipe)"
+    href="#" 
+    class="list-group-item clearfix" 
+    > -->
+<!-- <a  (click)="onSelected()"
+    style="cursor: pointer"
+    class="list-group-item clearfix" 
+    > -->
+<a  [routerLink]="[index]"
+    routerLinkActive="active"
+    style="cursor: pointer"
+    class="list-group-item clearfix" 
+    >
+    <div class="pull-left">
+        <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
+        <p class="list-group-item-text">{{ recipe.description }}</p>
+    </div>
+    <span class="pull-right">
+        <img 
+        [src]="recipe.imagePath" 
+        alt="A new recipe" 
+        class="img-responsive" 
+        style="max-height: 50px;" />
+    </span>
+</a> 
